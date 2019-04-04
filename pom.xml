@@ -19,8 +19,8 @@
     </organization>
 
     <scm>
-        <connection>scm:git:git@github.com:/Mirage911/corem-dtm-view.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:/Mirage911/corem-dtm-view.git</developerConnection>
+        <connection>scm:git:git@github.com:Mirage911/corem-dtm-view.git</connection>
+        <developerConnection>scm:git:git@github.com:Mirage911/corem-dtm-view.git</developerConnection>
         <url>https://github.com/Mirage911/corem-dtm-view</url>
         <tag>HEAD</tag>
     </scm>
