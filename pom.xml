@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>it.siegert</groupId>
+    <artifactId>corem-dtm-view</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <name>it.siegert :: corem-dtm-view</name>
+
+    <description>
+        This lib provides a view of the datatype-model in the current coremedia-cms-repository.
+    </description>
+
+    <organization>
+        <name>IT://Siegert</name>
+        <url>https://it.siegert.org/</url>
+    </organization>
+
+    <scm>
+        <connection>scm:git:git@github.com:Mirage911/corem-dtm-view.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:Mirage911/corem-dtm-view.git</developerConnection>
+        <url>https://github.com/Mirage911/corem-dtm-view</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <spring.version>4.3.14.RELEASE</spring.version>
+        <coremedia.version>7.1.15-16</coremedia.version>
+        <lombok.version>1.16.20</lombok.version>
+        <commons-lang3.version>3.6</commons-lang3.version>
+        <servlet-api.version>3.0.1</servlet-api.version>
+        <jsp-api.version>2.2.1</jsp-api.version>
+    </properties>
+
+    <dependencies>
+
+        <!--COREMEDIA LIBS-->
+        <dependency>
+            <groupId>com.coremedia.cms</groupId>
+            <artifactId>cae-viewservices-api</artifactId>
+            <version>${coremedia.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.coremedia.cms</groupId>
+            <artifactId>cae-viewservices-impl</artifactId>
+            <version>${coremedia.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.coremedia.cms</groupId>
+            <artifactId>cap-unified-api</artifactId>
+            <version>${coremedia.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.coremedia.cms</groupId>
+            <artifactId>coremedia-spring</artifactId>
+            <version>${coremedia.version}</version>
+        </dependency>
+
+        <!--3rd PARTY LIBS-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+        <!--SPRING LIBS-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+
+        <!--JAVA EE DEPENDENCIES-->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>${jsp-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp.jstl</groupId>
+            <artifactId>javax.servlet.jsp.jstl-api</artifactId>
+            <version>1.2.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <tagNameFormat>@{project.version}.RELEASE</tagNameFormat>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+<!--
+    For using the coremdia maven repositories you must configure in your ~/.m2/settings.xml
+    the credentials with your coremedia-support-account.
+    Please visit http://support.coremdia.com for a personal account.
+
+      <settings>
+        ...
+        <servers>
+          <server>
+            <id>coremedia.external.releases</id>
+            <username>[YOUR-ACCOUNT-NAME]</username>
+            <password>[YOUR-ACCOUNT-PASSWORD]</password>
+          </server>
+        </servers>
+      ...
+      </settings>
+-->
+    <repositories>
+        <repository>
+          <id>coremedia.external.releases</id>
+          <name>CoreMedia CMS</name>
+          <url>https://repository.coremedia.com/nexus/content/groups/cms/</url>
+          <layout>default</layout>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>coremedia.external.releases</id>
+            <name>CoreMedia CMS</name>
+            <url>https://repository.coremedia.com/nexus/content/groups/cms/</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>
