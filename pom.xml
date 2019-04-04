@@ -16,12 +16,36 @@
         <url>https://it.siegert.org/</url>
     </organization>
 
+    <url>https://github.com/Mirage911/corem-dtm-view</url>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
     <scm>
         <connection>scm:git:git@github.com:Mirage911/corem-dtm-view.git</connection>
         <developerConnection>scm:git:git@github.com:Mirage911/corem-dtm-view.git</developerConnection>
         <url>https://github.com/Mirage911/corem-dtm-view</url>
         <tag>HEAD</tag>
     </scm>
+
+    <developers>
+        <developer>
+            <id>asiegert</id>
+            <name>Andre Siegert</name>
+            <email>it@siegert.org</email>
+            <organization>IT Siegert</organization>
+            <organizationUrl>https://it.siegert.org/</organizationUrl>
+            <roles>
+                <role>Project-Administrator</role>
+                <role>Developer</role>
+            </roles>
+            <timezone>+1</timezone>
+        </developer>
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
