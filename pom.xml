@@ -4,7 +4,7 @@
 
     <groupId>it.siegert</groupId>
     <artifactId>corem-dtm-view</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3-SNAPSHOT</version>
     <name>it.siegert :: corem-dtm-view</name>
 
     <description>
@@ -29,7 +29,7 @@
         <connection>scm:git:git@github.com:Mirage911/corem-dtm-view.git</connection>
         <developerConnection>scm:git:git@github.com:Mirage911/corem-dtm-view.git</developerConnection>
         <url>https://github.com/Mirage911/corem-dtm-view</url>
-        <tag>1.0.2.RELEASE</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <developers>
