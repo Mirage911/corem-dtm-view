@@ -10,7 +10,7 @@ Java lib for serving the doctype-model of the current CoreMedia-cms repository. 
     <dependency>
       <groupId>it.siegert</groupId>
       <artifactId>corem-dtm-view</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.3</version>
     </dependency>
 ```
 - import spring config in your application
