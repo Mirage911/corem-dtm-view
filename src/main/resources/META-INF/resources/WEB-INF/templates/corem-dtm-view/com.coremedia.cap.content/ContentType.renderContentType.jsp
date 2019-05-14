@@ -4,7 +4,7 @@
 <%--@elvariable id="self" type="com.coremedia.cap.content.ContentType"--%>
 <c:if test="${self.parent != null}"><cm:include self="${self.parent}" view="renderContentType" /></c:if>
 <tr>
-    <td colspan="2"><br /><a href="?type=${self.name}"><b><c:out value="${self.name}" /></b></a></td>
+    <td colspan="2"><br /><a href="?doctype=${self.name}"><b><c:out value="${self.name}" /></b></a></td>
 </tr>
 <c:forEach var="descriptor" items="${self.directDescriptors}">
     <tr>
